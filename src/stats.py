@@ -6,7 +6,7 @@ def getSkillInfo(bot, update):
     #stats = "Could not find info on that player"
     msg = update.message.text
     skill = msg.rsplit(' ', 1)[1]
-    username = msg[7:len(msg)-len(skill)]
+    username = str(msg[7:len(msg)-len(skill)])
     user = Hiscores(username, 'N')
 
     if(skill == "total"):
