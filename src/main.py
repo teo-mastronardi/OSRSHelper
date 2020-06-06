@@ -2,9 +2,10 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 from prices import *
 from diaries import *
 from stats import *
+import config
 
 def main():
-    updater = Updater('#')
+    updater = Updater(config.token_secret)
     dp = updater.dispatcher
     print("Launching...")
     dp.add_handler(CommandHandler('price',getPrice))
